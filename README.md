@@ -1,6 +1,6 @@
 # manhuagui-downloader 漫画柜下载器
 
-**2023.07.07更新：**因为exe文件太大，需要重新用pipenv削减文件体积。https://www.zhihu.com/question/281858271
+**2023.07.07更新：** 因为exe文件太大，需要重新用pipenv削减文件体积。https://www.zhihu.com/question/281858271
 
 
 
