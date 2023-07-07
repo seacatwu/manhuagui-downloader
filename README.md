@@ -1,4 +1,7 @@
 # manhuagui-downloader 漫画柜下载器
+
+2023.07.07更新：因为exe文件太大，需要重新用pipenv削减文件体积。https://www.zhihu.com/question/281858271
+
 带有图形界面，纯py，点击exe文件可直接运行。
 
 decoder.py中破解js那段参考自https://github.com/HSSLC/manhuagui-dlr 中的trans.py和parse.py。版权归HSSLC所有。
