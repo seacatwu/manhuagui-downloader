@@ -6,3 +6,4 @@ manga/
 main.spec
 *.pyc
 main.exe
+*.spec

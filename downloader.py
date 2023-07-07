@@ -68,7 +68,7 @@ class MangaDownloader:
             pgUrl = 'https://i.hamreus.com' + path + filename
             print(os.path.basename(pgUrl))
             self.downloadPg(pgUrl, e, m, localPath)
-            time.sleep(0.5)  # 0.5s interval
+            time.sleep(0.1)  # 0.1s interval
         return True
 
     def downloadPg(self, url, e, m, localPath):
