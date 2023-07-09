@@ -1,5 +1,5 @@
-# @Author: Xiangxin Kong
-# @Date: 2020.5.30
+# @Author: Acceelerator086
+# @Date: 2023.7.9
 from downloader import *
 import tkinter as tk
 from tkinter import *
@@ -94,3 +94,4 @@ class downloadPanel(Toplevel):
 
 if __name__ == '__main__':
     mainWindow()
+    print('Finish!')

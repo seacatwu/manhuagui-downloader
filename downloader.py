@@ -20,7 +20,9 @@ class MangaDownloader:
 
 
     def getAbstraction(self, url):
-        req = requests.get(url).content
+        proxy = {'http': 'http://localhost:10809','https': 'http://localhost:10809'} #prosonal proxy, should change
+        
+        req = requests.get(url,proxies=proxy).content
         bf = BeautifulSoup(req, 'html.parser')
 
         self.title = bf.h1.text
@@ -68,14 +70,15 @@ class MangaDownloader:
             pgUrl = 'https://i.hamreus.com' + path + filename
             print(os.path.basename(pgUrl))
             self.downloadPg(pgUrl, e, m, localPath)
-            time.sleep(0.1)  # 0.1s interval
+            time.sleep(0.01)  # 0.01s interval
         return True
 
     def downloadPg(self, url, e, m, localPath):
         # repeat 10 times
         for i in range(10):
             try:
-                res = requests.get(url, params={'e': e, 'm': m}, headers=header, timeout=10)
+                proxy = {'http': 'http://localhost:10809','https': 'http://localhost:10809'} #prosonal proxy, should change
+                res = requests.get(url, params={'e': e, 'm': m}, headers=header, proxies=proxy, timeout=10)
                 res.raise_for_status()
             except:
                 print('页面 %s 下载失败 重试中...' % url)
