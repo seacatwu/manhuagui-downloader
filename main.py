@@ -94,4 +94,3 @@ class downloadPanel(Toplevel):
 
 if __name__ == '__main__':
     mainWindow()
-    print('Finish!')
