@@ -1,0 +1,7 @@
+
+*.jpg
+build/
+dist/
+manga/
+*.pyc
+*.spec

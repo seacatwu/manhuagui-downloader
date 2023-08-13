@@ -1,5 +1,5 @@
-# @Author: Xiangxin Kong
-# @Date: 2020.5.30
+# @Author: Acceelerator086
+# @Date: 2023.7.9
 from downloader import *
 import tkinter as tk
 from tkinter import *
@@ -19,7 +19,7 @@ class mainWindow(tk.Tk):
         self.var_address = tk.StringVar()
         self.var_url = tk.StringVar()
         self.var_address.set('manga/')
-        self.var_url.set('https://www.manhuagui.com/comic/24973/')
+        self.var_url.set('https://www.manhuagui.com/comic/36522/')
         tk.Entry(self, textvariable=self.var_url, font=('Arial', 14), width=28).place(x=60, y=baseY)  # url field
         tk.Entry(self, textvariable=self.var_address, font=('Arial', 14), width=28).place(x=60,
                                                                                           y=baseY + 40)  # address field
@@ -79,12 +79,12 @@ class downloadPanel(Toplevel):
         for i in range(len(s.chapters)):
             s.chapters[i][2] = IntVar()
             cha = tk.Checkbutton(self, text=s.chapters[i][0], font=('Arial', 14), variable=s.chapters[i][2])
-            cha.place(x=(i % 6) * 150, y=self.baseY + (i // 6) * 40)
+            cha.place(x=(i % 6) * 200, y=self.baseY + (i // 6) * 30)
             if s.chapters[i][0] in s.existedChapters():
                 cha.select()
                 cha.config(state='disabled')
             self.buttons.append(cha)
-        self.baseY += (s.length // 6) * 40
+        self.baseY += (s.length // 6) * 30
 
     def downloadChapters(self, s):
         for i in range(s.length):
